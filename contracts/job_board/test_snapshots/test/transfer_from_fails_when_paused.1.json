@@ -157,7 +157,7 @@
                                 "symbol": "name"
                               },
                               "val": {
-                                "string": "My Token"
+                                "string": "JobBoardToken"
                               }
                             },
                             {
@@ -165,7 +165,7 @@
                                 "symbol": "symbol"
                               },
                               "val": {
-                                "string": "TKN"
+                                "string": "JBT"
                               }
                             }
                           ]

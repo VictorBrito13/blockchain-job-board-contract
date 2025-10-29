@@ -17,8 +17,8 @@ fn initial_state() {
 
     assert_eq!(client.total_supply(), 1000);
     assert_eq!(client.balance(&owner), 1000);
-    assert_eq!(client.symbol(), String::from_str(&e, "TKN"));
-    assert_eq!(client.name(), String::from_str(&e, "My Token"));
+    assert_eq!(client.symbol(), String::from_str(&e, "JBT"));
+    assert_eq!(client.name(), String::from_str(&e, "JobBoardToken"));
     assert_eq!(client.decimals(), 18);
     assert!(!client.paused());
 }

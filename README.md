@@ -1,4 +1,6 @@
-# Soroban Project
+# Token for Job Board App
+
+## Current Contract id: CCFQQZMOBYCEZ7RAVTUWWU3HNHH4FLIDOYZUP3J765ZKFX7PAGZSUHCU
 
 ## Project Structure
 

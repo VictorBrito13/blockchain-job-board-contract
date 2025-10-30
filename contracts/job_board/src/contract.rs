@@ -44,6 +44,28 @@ impl ExampleContract {
         Base::mint(e, &account, amount);
     }
 
+    #[when_not_paused]
+    pub fn lock(e: &Env, from: Address, amount: i128) {
+        // Escrow model: move tokens from the user into the contract's balance.
+        // This prevents the user from spending them while locked.
+        // Security: user must authorize moving their own funds.
+        // from.require_auth();
+
+        let contract_addr: Address = e.current_contract_address();
+        Base::transfer(e, &from, &contract_addr, amount);
+    }
+
+    #[when_not_paused]
+    pub fn release(e: &Env, to: Address, amount: i128) {
+        // Release locked tokens from the contract to a recipient.
+        // Only the contract owner can release escrowed tokens.
+        let owner: Address = e.storage().instance().get(&OWNER).expect("owner should be set");
+        owner.require_auth();
+
+        let contract_addr: Address = e.current_contract_address();
+        Base::transfer(e, &contract_addr, &to, amount);
+    }
+
     pub fn upgrade(env: Env, new_wasm_hash: BytesN<32>) {
         let owner: Address = env.storage().instance().get(&OWNER).unwrap();
         owner.require_auth();

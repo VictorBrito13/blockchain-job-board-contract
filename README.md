@@ -2,6 +2,8 @@
 
 ## Current Contract id: CAOWRWB4T3RP7N2TFLBLAMIG2IREJHP62T5LK7YXBNP3AXXYAPSB7KHF
 
+CCF7FEA7XJFI5ZY4CZ7X7SFLSGHRCI2523I43BGLHTALLZ3GAWWLZWU3
+
 ## Project Structure
 
 This repository uses the recommended structure for a Soroban project:
